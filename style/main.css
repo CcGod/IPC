@@ -1,0 +1,196 @@
+#topNav{
+	position: fixed;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 60px;
+	line-height: 56px;
+	font-family: "Montserrat", arial, sans-serif;
+	font-size: 1.2rem;
+	color: #666;
+	background-color: #fff;
+	box-shadow: 0 .4px 3px rgba(0, 0, 0, 0.5);
+	z-index: 1;
+}
+#topNav ul{margin:0 auto;width:200px;}
+#topNav a{
+	display: block;
+	width: 100px;
+}
+#topNav ul li{
+	box-sizing: border-box;
+	float: left;
+	margin-right: 2px;
+	text-align: center;
+	width: 98px;
+	border-radius: 2.4px;
+	/*height:50px;*/
+}
+
+#topNav ul li:hover{
+	background-color: #eee;
+	border-bottom: 5px solid #99ccff;
+	text-shadow: 0 0 1px rgba(123, 123, 123, .7);
+	cursor: pointer;
+}
+
+.active{
+	background-color: #eee;
+	border-bottom: 5px solid #99ccff;
+	text-shadow: 0 0 1px rgba(123, 123, 123, .7);
+}
+
+#bg{
+	position: fixed;
+	bottom:0;
+	right:0;
+	z-index: -1;
+	overflow:hidden;
+}
+#bg-canvas{background-color:#f3f6f9;}
+
+@media (min-width: 768px) {
+  #pic-container {
+    width: 760px;
+  }
+  #detail-con{width: 760px;}
+}
+@media (min-width: 992px) {
+  #pic-container {
+    width: 980px;
+  }
+  #detail-con{width: 980px;}
+}
+@media (min-width: 1200px) {
+  #pic-container {
+    width: 1180px;
+  }
+  #detail-con{width: 1180px;}
+}
+#cover{
+	/*padding:100px 0;*/
+	width:100%;
+	font-size:62.5%;
+}
+
+#pic-container{
+	padding-top: 100px;
+	margin-right: auto;
+	margin-left: auto;
+
+	/*css3瀑布流*/
+/*	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	-o-column-count: 4;
+	-ms-column-count: 4;*/
+}
+.col{
+	float: left;
+	margin:0 0.4em;
+	width: 285px;
+}
+.item{
+	/*float:left;*/
+	margin:0.35em 0;
+	padding:5px;
+	background-color: #fff;
+	border-radius: 7px;
+	box-shadow:inset 0 0 2px rgba(0,0,0,0.21) ;
+
+	/*禁止itme元素内部断裂产生新列，css3瀑布流*/
+/* 	-webkit-column-break-inside:avoid;
+column-break-inside:avoid; */
+	
+}
+
+
+.pic-descript{
+	padding:10px 20px 5px;
+	font-size: 1.2em;
+	color:#aaa;
+	font-weight:300;
+	font-family:arial, sans-serif,"Roboto";
+}
+
+
+/*-----------------------detail.html CSS----------------------------*/
+
+#detail-con{
+	margin-top: 80px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#effects{
+	float: left;
+	/*background-color: #fff;*/
+	min-height: 300px;
+	font-family: "Arial",sans-serif;
+	color:#777;
+	border-radius: 4px;
+}
+
+#effects li{
+	box-sizing: content-box;
+	position: relative;
+	height: 40px;
+	width: 200px;
+	line-height: 40px;
+	border-radius: 2px;
+	cursor: pointer;
+}
+
+#effects li:hover{
+	color:#39c;
+	border-right: 5px solid #39c;
+	background: linear-gradient(to left, rgba(51, 153, 204, .3) , rgba(51, 153, 204, 0));
+}
+
+#effects li:hover:before{
+    background-color: rgba(51, 153, 204, 1);
+}
+
+.eff-active{
+	color:#39c;
+	border-right: 5px solid #39c;
+	background: linear-gradient(to left, rgba(51, 153, 204, 0.3) , rgba(51, 153, 204, 0));
+}
+
+
+.eff:before{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -75px;
+    top:16px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(123, 123, 123, .5);
+}
+
+.eff:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: -72px;
+    top:24px;
+    width: 2px;
+    height: 32px;
+    /*border-radius: 50%;*/
+    background-color: rgba(144, 144, 144, .3);
+}
+
+.eff-active:before{
+    background-color: rgba(51, 153, 204, 1);
+}
+
+#d-cvs-con{
+	float: right;
+	padding: 7px;
+	background-color: #fff;
+	box-shadow: 0 .6px 3px rgba(123, 123, 123, 0.7);
+	border-radius: 4px;
+}
+
+#detail-cvs{border-radius: 2px;}
